@@ -48,6 +48,7 @@ class CreateTransactionService {
       type,
       category: transactionCategory,
     });
+
     await transactionsRepository.save(transaction);
     return transaction;
   }

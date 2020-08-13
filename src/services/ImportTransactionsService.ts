@@ -32,7 +32,8 @@ class ImportTransactionsService {
       const [title, type, value, category] = line.map((cell: string) =>
         cell.trim(),
       );
-      if (title || type || value) return;
+
+      if (!title || !type || !value) return;
 
       categories.push(category);
 
